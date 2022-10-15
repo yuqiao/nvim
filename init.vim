@@ -94,7 +94,7 @@ tnoremap <C-O> <C-\><C-N><C-O>
 
 
 " ==================== Basic Mappings ====================
-let mapleader=" "
+let mapleader=","
 noremap ; :
 nnoremap Q :q<CR>
 nnoremap S :w<CR>
@@ -106,10 +106,10 @@ augroup NVIMRC
     autocmd BufWritePost *.nvimrc exec ":so %"
 augroup END
 " Undo operations
-noremap l u
+"noremap l u
 " Insert Key
-noremap k i
-noremap K I
+"noremap k i
+"noremap K I
 " Copy to system clipboard
 vnoremap Y "+y
 " Find pair
@@ -135,28 +135,28 @@ inoremap <c-y> <ESC>A {}<ESC>i<CR><ESC>ko
 " < n   i >
 "     e
 "     v
-noremap <silent> u k
-noremap <silent> n h
-noremap <silent> e j
-noremap <silent> i l
-noremap <silent> gu gk
-noremap <silent> ge gj
-noremap <silent> \v v$h
+" noremap <silent> u k
+" noremap <silent> n h
+" noremap <silent> e j
+" noremap <silent> i l
+"noremap <silent> gu gk
+"noremap <silent> ge gj
+"noremap <silent> \v v$h
 " U/E keys for 5 times u/e (faster navigation)
-noremap <silent> U 5k
-noremap <silent> E 5j
+"noremap <silent> U 5k
+"noremap <silent> E 5j
 " N key: go to the start of the line
-noremap <silent> N 0
+" noremap <silent> N 0
 " I key: go to the end of the line
-noremap <silent> I $
+" noremap <silent> I $
 " Faster in-line navigation
-noremap W 5w
-noremap B 5b
+"noremap W 5w
+"noremap B 5b
 " set h (same as n, cursor left) to 'end of word'
-noremap h e
+"noremap h e
 " Ctrl + U or E will move up/down the view port without moving the cursor
-noremap <C-U> 5<C-y>
-noremap <C-E> 5<C-e>
+" noremap <C-U> 5<C-y>
+" noremap <C-E> 5<C-e>
 " Custom cursor movement
 source $HOME/.config/nvim/cursor.vim
 " If you use Qwerty keyboard, uncomment the next line.
@@ -189,22 +189,22 @@ noremap qf <C-w>o
 " Disable the default s key
 noremap s <nop>
 " split the screens to up (horizontal), down (horizontal), left (vertical), right (vertical)
-noremap su :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
-noremap se :set splitbelow<CR>:split<CR>
-noremap sn :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
-noremap si :set splitright<CR>:vsplit<CR>
+noremap sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
+noremap sj :set splitbelow<CR>:split<CR>
+noremap sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
+noremap sl :set splitright<CR>:vsplit<CR>
 " Resize splits with arrow keys
 noremap <up> :res +5<CR>
 noremap <down> :res -5<CR>
 noremap <left> :vertical resize-5<CR>
 noremap <right> :vertical resize+5<CR>
 " Place the two screens up and down
-noremap sh <C-w>t<C-w>K
+"noremap sh <C-w>t<C-w>K
 " Place the two screens side by side
 noremap sv <C-w>t<C-w>H
 " Rotate screens
-noremap srh <C-w>b<C-w>K
-noremap srv <C-w>b<C-w>H
+"noremap srh <C-w>b<C-w>K
+"noremap srv <C-w>b<C-w>H
 " Press <SPACE> + q to close the window below the current window
 noremap <LEADER>q <C-w>j:q<CR>
 
@@ -522,6 +522,7 @@ nnoremap <LEADER>g= :GitGutterNextHunk<CR>
 
 
 " ==================== coc.nvim ====================
+"	\ 'https://github.com/theniceboy/coc-tailwindcss',
 let g:coc_global_extensions = [
 	\ 'coc-css',
 	\ 'coc-diagnostic',
@@ -544,7 +545,6 @@ let g:coc_global_extensions = [
 	\ 'coc-sourcekit',
 	\ 'coc-stylelint',
 	\ 'coc-syntax',
-	\ 'https://github.com/theniceboy/coc-tailwindcss',
 	\ 'coc-tasks',
 	\ 'coc-translator',
 	\ 'coc-tsserver',
@@ -761,8 +761,8 @@ augroup calendar-mappings
 	autocmd FileType calendar nmap <buffer> <c-n> <Plug>(calendar_move_left)
 	autocmd FileType calendar nmap <buffer> <c-e> <Plug>(calendar_move_down)
 	autocmd FileType calendar nmap <buffer> <c-i> <Plug>(calendar_move_right)
-	autocmd FileType calendar nmap <buffer> k <Plug>(calendar_start_insert)
-	autocmd FileType calendar nmap <buffer> K <Plug>(calendar_start_insert_head)
+	" autocmd FileType calendar nmap <buffer> k <Plug>(calendar_start_insert)
+	" autocmd FileType calendar nmap <buffer> K <Plug>(calendar_start_insert_head)
 	" unmap <C-n>, <C-p> for other plugins
 	autocmd FileType calendar nunmap <buffer> <C-n>
 	autocmd FileType calendar nunmap <buffer> <C-p>
@@ -946,7 +946,7 @@ let g:move_key_modifier = 'C'
 
 
 " ==================== any-jump ====================
-nnoremap j :AnyJump<CR>
+nnoremap J :AnyJump<CR>
 let g:any_jump_window_width_ratio  = 0.8
 let g:any_jump_window_height_ratio = 0.9
 

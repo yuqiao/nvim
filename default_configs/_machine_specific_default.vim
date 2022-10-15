@@ -2,8 +2,8 @@
 
 let g:snips_author = 'David Chen'
 
-let g:python_host_prog='/usr/bin/python2'
-let g:python3_host_prog='/usr/bin/python3'
+let g:python_host_prog='/Users/rongqiao.yurq/.pyenv/shims/python'
+let g:python3_host_prog='/Users/rongqiao.yurq/.pyenv/shims/python3'
 
 let g:mkdp_browser = 'chromium'
 let g:mkdp_browserfunc = 'open '
