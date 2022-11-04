@@ -40,7 +40,7 @@ set autochdir
 set exrc
 set secure
 set number
-set relativenumber
+set norelativenumber
 set cursorline
 set noexpandtab
 set tabstop=2
@@ -94,7 +94,7 @@ tnoremap <C-O> <C-\><C-N><C-O>
 
 
 " ==================== Basic Mappings ====================
-let mapleader=","
+let mapleader=" "
 noremap ; :
 nnoremap Q :q<CR>
 nnoremap S :w<CR>
@@ -187,12 +187,12 @@ noremap <LEADER>n <C-w>h
 noremap <LEADER>i <C-w>l
 noremap qf <C-w>o
 " Disable the default s key
-noremap s <nop>
+" noremap s <nop>
 " split the screens to up (horizontal), down (horizontal), left (vertical), right (vertical)
-noremap sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
-noremap sj :set splitbelow<CR>:split<CR>
-noremap sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
-noremap sl :set splitright<CR>:vsplit<CR>
+noremap <LEADER>sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
+noremap <LEADER>sj :set splitbelow<CR>:split<CR>
+noremap <LEADER>sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
+noremap <LEADER>sl :set splitright<CR>:vsplit<CR>
 " Resize splits with arrow keys
 noremap <up> :res +5<CR>
 noremap <down> :res -5<CR>
@@ -256,7 +256,7 @@ endfun
 map <F10> :call SynGroup()<CR>
 
 " Compile function
-noremap r :call CompileRunGcc()<CR>
+noremap <LEADER>rr :call CompileRunGcc()<CR>
 func! CompileRunGcc()
 	exec "w"
 	if &filetype == 'c'
